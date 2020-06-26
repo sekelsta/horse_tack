@@ -2,24 +2,25 @@ package sekelsta.horse_tack;
 
 import java.util.ArrayList;
 
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.HorseArmorItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.event.RegistryEvent.Register;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 
+@Mod.EventBusSubscriber(modid = HorseTack.MODID, bus = Bus.MOD)
 public class ModItems {
-    static ArrayList<TackItem> items = new ArrayList<TackItem>();
+    static ArrayList<HorseArmorItem> items = new ArrayList<>();
 
     // Make creative mode tab
-    static final CreativeTabs creativeTab = (new CreativeTabs(HorseTack.MODID + "_tab")
+    static final ItemGroup creativeTab = (new ItemGroup(ItemGroup.GROUPS.length, HorseTack.MODID + "_tab")
     {
         @Override
-        public ItemStack getTabIconItem() {
+        public ItemStack createIcon() {
             return new ItemStack(items.get(0));
         }		
     });
@@ -31,16 +32,12 @@ public class ModItems {
     }
 
     public static void register(String name, RegistryEvent.Register<Item> event) {
-        TackItem tackItem = new TackItem(name);
+        // Different from the default constructor in that it does not add "horse_armor_"
+        // to the fron tof the name
+        ResourceLocation texture = new ResourceLocation(HorseTack.MODID, "textures/entity/horse/armor/" + name + ".png");
+        HorseArmorItem tackItem = new HorseArmorItem(0, texture, (new Item.Properties()).maxStackSize(1).group(creativeTab));
+        tackItem.setRegistryName(name);
         event.getRegistry().register(tackItem);
         items.add(tackItem);
-    }
-
-    @SubscribeEvent
-    public static void registerItemModels(ModelRegistryEvent event) {
-        for (TackItem item : items) {
-            ModelLoader.setCustomModelResourceLocation(item, 0, 
-            new ModelResourceLocation(item.getRegistryName(), "normal"));
-        }
     }
 }
