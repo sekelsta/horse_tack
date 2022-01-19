@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "DCB",
+        "ACA",
+        "CBC"
+    ],
+    "key":
+    {
+        "A":
+        {
+            "item": "minecraft:leather"
+        },
+        "B":
+        {
+            "item": "minecraft:iron_ingot"
+        },
+        "C":
+        {
+            "item": "minecraft:green_carpet"
+        },
+        "D":
+        {
+            "item": "minecraft:black_dye"
+        }
+    },
+    "result":
+    {
+        "item": "horse_tack:jumping_tack_blackgreen"
+    }
+}

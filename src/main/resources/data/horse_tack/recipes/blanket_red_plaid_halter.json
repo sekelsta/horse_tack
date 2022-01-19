@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "horse_tack:red_plaid_blanket"
+        },
+        {
+            "item": "horse_tack:halter_red"
+        }
+    ],
+    "result": {
+        "item": "horse_tack:blanket_redplaid_halter"
+    }
+}

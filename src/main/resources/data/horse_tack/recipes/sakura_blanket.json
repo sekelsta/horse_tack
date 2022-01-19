@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "AAA",
+        "BBA",
+        "C C"
+    ],
+    "key":
+    {
+        "A":
+        {
+            "item": "minecraft:pink_carpet"
+        },
+        "B":
+        {
+            "item": "minecraft:brown_carpet"
+        },
+        "C": 
+        {
+            "item": "minecraft:string"
+        }
+    },
+    "result":
+    {
+        "item": "horse_tack:sakura_blanket"
+    }
+}

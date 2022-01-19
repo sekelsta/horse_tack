@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "AAA",
+        "ABB",
+        "C C"
+    ],
+    "key":
+    {
+        "A":
+        {
+            "item": "minecraft:white_carpet"
+        },
+        "B":
+        {
+            "item": "minecraft:lime_carpet"
+        },
+        "C": 
+        {
+            "item": "minecraft:string"
+        }
+    },
+    "result":
+    {
+        "item": "horse_tack:blanket_white_trimmed_lime"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "horse_tack:sky_blanket"
+        },
+        {
+            "item": "horse_tack:halter_cyan"
+        }
+    ],
+    "result": {
+        "item": "horse_tack:blanket_sky_halter"
+    }
+}

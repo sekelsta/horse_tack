@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "horse_tack:sakura_blanket"
+        },
+        {
+            "item": "horse_tack:halter_brown"
+        }
+    ],
+    "result": {
+        "item": "horse_tack:blanket_sakura_halter"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "ACA",
+        "BBC",
+        "AAA"
+    ],
+    "key":
+    {
+        "A":
+        {
+            "item": "minecraft:leather"
+        },
+        "B":
+        {
+            "item": "minecraft:iron_ingot"
+        },
+        "C":
+        {
+            "tag": "minecraft:wool"
+        }
+    },
+    "result":
+    {
+        "item": "horse_tack:cart_harness_tack"
+    }
+}

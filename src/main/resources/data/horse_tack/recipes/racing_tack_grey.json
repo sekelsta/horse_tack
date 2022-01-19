@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "CDC",
+        "DAC",
+        "ABD"
+    ],
+    "key":
+    {
+        "A":
+        {
+            "item": "minecraft:leather"
+        },
+        "B":
+        {
+            "item": "minecraft:iron_ingot"
+        },
+        "C":
+        {
+            "item": "minecraft:gray_carpet"
+        },
+        "D":
+        {
+            "item": "minecraft:yellow_carpet"
+        }
+    },
+    "result":
+    {
+        "item": "horse_tack:racing_tack_grey"
+    }
+}

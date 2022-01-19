@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "AAA",
+        "AAA",
+        "B B"
+    ],
+    "key":
+    {
+        "A":
+        {
+            "item": "minecraft:black_carpet"
+        },
+        "B": 
+        {
+            "item": "minecraft:string"
+        }
+    },
+    "result":
+    {
+        "item": "horse_tack:blanket_black_trim_black"
+    }
+}

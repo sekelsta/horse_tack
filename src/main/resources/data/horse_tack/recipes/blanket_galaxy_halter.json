@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "horse_tack:galaxy_blanket"
+        },
+        {
+            "item": "horse_tack:halter_white"
+        }
+    ],
+    "result": {
+        "item": "horse_tack:blanket_galaxy_halter"
+    }
+}

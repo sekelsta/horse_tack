@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "BAC",
+        "ABB",
+        "AAA"
+    ],
+    "key":
+    {
+        "A":
+        {
+            "item": "minecraft:leather"
+        },
+        "B":
+        {
+            "item": "minecraft:iron_nugget"
+        },
+        "C":
+        {
+            "item": "minecraft:gray_dye"
+        }
+    },
+    "result":
+    {
+        "item": "horse_tack:halter_grey"
+    }
+}

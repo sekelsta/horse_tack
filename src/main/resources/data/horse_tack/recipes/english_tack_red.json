@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "AAA",
+        "CBC",
+        "CCC"
+    ],
+    "key":
+    {
+        "A":
+        {
+            "item": "minecraft:leather"
+        },
+        "B":
+        {
+            "item": "minecraft:iron_ingot"
+        },
+        "C":
+        {
+            "item": "minecraft:red_carpet"
+        }
+    },
+    "result":
+    {
+        "item": "horse_tack:english_tack_red"
+    }
+}

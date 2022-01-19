@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "AAA",
+        "BBB",
+        "C C"
+    ],
+    "key":
+    {
+        "A":
+        {
+            "item": "minecraft:light_blue_carpet"
+        },
+        "B":
+        {
+            "item": "minecraft:white_carpet"
+        },
+        "C": 
+        {
+            "item": "minecraft:string"
+        }
+    },
+    "result":
+    {
+        "item": "horse_tack:sky_blanket"
+    }
+}

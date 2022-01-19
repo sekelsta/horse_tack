@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+        "BCB",
+        "AB ",
+        "   "
+    ],
+    "key":
+    {
+        "A":
+        {
+            "item": "minecraft:leather"
+        },
+        "B":
+        {
+            "item": "minecraft:blue_carpet"
+        },
+        "C":
+        {
+            "item": "minecraft:black_dye"
+        }
+    },
+    "result":
+    {
+        "item": "horse_tack:saddle_pad_blackblue"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "horse_tack:blanket_white_trimmed_yellow"
+        },
+        {
+            "item": "horse_tack:halter_yellow"
+        }
+    ],
+    "result": {
+        "item": "horse_tack:blanket_whiteyellow_halter"
+    }
+}
