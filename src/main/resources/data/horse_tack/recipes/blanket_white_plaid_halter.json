@@ -2,7 +2,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
 	    {
-            "item": "horse_tack:white_plaid_blanket",
+            "item": "horse_tack:white_plaid_blanket"
 	    },
 	    {
             "item": "horse_tack:halter_black"
