@@ -1,3 +1,6 @@
+This license only covers parts of the code written by me (sekelsta). It does not cover what was added by commit  5590a4afb5fb0be98efd847ab8a20dc7f4fe7ee8
+
+
 This is reference code for creating mods, available under the MIT license. If you make a mod out of it that you want to publish, please at least change to modid to something unique so it won't conflict with Horse Tack (https://www.curseforge.com/minecraft/mc-mods/horse-tack).
 
  The MIT License (MIT)
