@@ -2,9 +2,12 @@ package sekelsta.horse_tack;
 
 import java.util.ArrayList;
 
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.HorseArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,20 +22,30 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItems {
     public static final DeferredRegister<Item> ITEM_DEFERRED
         = DeferredRegister.create(ForgeRegistries.ITEMS, HorseTack.MODID);
+    public static final DeferredRegister<CreativeModeTab> TAB_DEFERRED
+        = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, HorseTack.MODID);
 
     static ArrayList<RegistryObject<HorseArmorItem>> items = new ArrayList<>();
 
     // Make creative mode tab
-    static final CreativeModeTab creativeTab = (new CreativeModeTab(CreativeModeTab.TABS.length, HorseTack.MODID + "_tab")
-    {
-        @Override
-        public ItemStack makeIcon() {
-            // The first item registered will be the tab icon
-            return new ItemStack(items.get(0).get());
-        }		
-    });
+    static final CreativeModeTab creativeTab = CreativeModeTab.builder()
+        .icon(() -> new ItemStack(items.get(0).get()))
+        .title(Component.translatable("itemGroup." + HorseTack.MODID + "_tab"))
+        .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
+        .displayItems((displayParams, out) -> 
+            items.forEach((item) -> 
+                out.accept(item.get())
+            )
+        )
+        .build();
 
-    static {
+    private static CreativeModeTab getCreativeTab() {
+        return creativeTab;
+    }
+
+    public static void setup() {
+        TAB_DEFERRED.register(HorseTack.MODID, () -> getCreativeTab());
+
         // Add items here
         register("cart_harness_tack");
         register("saddle_pad_black");
@@ -425,7 +438,7 @@ public class ModItems {
             () -> new HorseArmorItem(
                 0,
                 new ResourceLocation(HorseTack.MODID, "textures/entity/horse/armor/" + name + ".png"),
-                (new Item.Properties()).stacksTo(1).tab(creativeTab)
+                (new Item.Properties()).stacksTo(1)
             )
         );
 

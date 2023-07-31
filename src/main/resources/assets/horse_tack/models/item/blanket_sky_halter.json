@@ -1,6 +1,6 @@
 {
-    "parent": "item/generated",
+    "parent": "minecraft:item/generated",
     "textures" : {
-        "layer0": "horse_tack:items/blanket_sky_halter"
+        "layer0": "horse_tack:item/blanket_sky_halter"
     }
 }
