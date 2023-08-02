@@ -11,7 +11,7 @@ loaderVersion="[47,)" #mandatory This is typically bumped every Minecraft versio
 # Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
 license="All rights reserved"
 # A URL to refer people to when problems occur with this mod
-issueTrackerURL="http://my.issue.tracker/" #optional
+#issueTrackerURL="http://my.issue.tracker/" #optional
 # A list of mods - how many allowed here is determined by the individual mod loader
 [[mods]] #mandatory
 # The modid of the mod
@@ -23,7 +23,15 @@ displayName="Horse Tack" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
-credits="Sekelsta (coding), more in .zip" #optional
+credits='''Sekelsta (coding)
+I'd love to credit the texture authors for the original:
+jumping, western and english tack and the leggings I reused for the riding tack
+
+ but I'm afraid I can't find their source.
+The originals were/are available on the Nova Skin Gallery.
+Modifications have been made to all of them by my own hand.
+
+Thanks to Світлана for the Ukrainian translation uk_ua.json'''
 # A text field displayed in the mod UI
 authors="Misteriawolfe" #optional
 # The description text for the mod (multi line!) (#mandatory)
