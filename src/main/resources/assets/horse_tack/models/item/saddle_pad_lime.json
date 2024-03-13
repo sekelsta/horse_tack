@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures" : {
-        "layer0": "horse_tack:items/saddle_pad_lime"
+        "layer0": "horse_tack:item/saddle_pad_lime"
     }
 }

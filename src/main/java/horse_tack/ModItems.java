@@ -2,11 +2,15 @@ package sekelsta.horse_tack;
 
 import java.util.ArrayList;
 
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.HorseArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
@@ -20,17 +24,24 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEM_DEFERRED
         = DeferredRegister.create(ForgeRegistries.ITEMS, HorseTack.MODID);
 
-    static ArrayList<RegistryObject<HorseArmorItem>> items = new ArrayList<>();
+    private static CreativeModeTab creativeTab = null;
 
-    // Make creative mode tab
-    static final CreativeModeTab creativeTab = (new CreativeModeTab(CreativeModeTab.TABS.length, HorseTack.MODID + "_tab")
-    {
-        @Override
-        public ItemStack makeIcon() {
-            // The first item registered will be the tab icon
-            return new ItemStack(items.get(0).get());
-        }		
-    });
+    @SubscribeEvent
+    static final void registerTab(CreativeModeTabEvent.Register event) {
+        creativeTab = event.registerCreativeModeTab(
+            new ResourceLocation(HorseTack.MODID, "tacktab"),
+            (CreativeModeTab.Builder builder) -> builder
+                .icon(() -> new ItemStack(items.get(0).get()))
+                .title(Component.translatable("itemGroup." + HorseTack.MODID + "_tab"))
+                .displayItems((displayParams, out) -> 
+                    items.forEach((item) -> 
+                        out.accept(item.get())
+                    )
+                )
+        );
+    }
+
+    static ArrayList<RegistryObject<HorseArmorItem>> items = new ArrayList<>();
 
     static {
         // Add items here
@@ -425,7 +436,7 @@ public class ModItems {
             () -> new HorseArmorItem(
                 0,
                 new ResourceLocation(HorseTack.MODID, "textures/entity/horse/armor/" + name + ".png"),
-                (new Item.Properties()).stacksTo(1).tab(creativeTab)
+                (new Item.Properties()).stacksTo(1)
             )
         );
 

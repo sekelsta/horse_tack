@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures" : {
-        "layer0": "horse_tack:items/western_tack_black"
+        "layer0": "horse_tack:item/western_tack_black"
     }
 }

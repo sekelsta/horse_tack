@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures" : {
-        "layer0": "horse_tack:items/white_plaid_blanket"
+        "layer0": "horse_tack:item/white_plaid_blanket"
     }
 }

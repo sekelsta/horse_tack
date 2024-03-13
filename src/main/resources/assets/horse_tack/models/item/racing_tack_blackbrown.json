@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures" : {
-        "layer0": "horse_tack:items/racing_tack_blackbrown"
+        "layer0": "horse_tack:item/racing_tack_blackbrown"
     }
 }

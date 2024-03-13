@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures" : {
-        "layer0": "horse_tack:items/example"
+        "layer0": "horse_tack:item/example"
     }
 }
